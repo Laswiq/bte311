@@ -1,12 +1,24 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>tablo1</title>
+      table {
+            width: 50%; 
+            border-collapse: collapse;
+            border: 1px solid black; 
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            
+        }
 </head>
 <body>
-    <table width=80% border="1">
+    <table>
+        <thead>
         <tr>
             <th>Ders</th>
             <th>Saat</th>
@@ -16,6 +28,8 @@
             <th colspan="2">Perşembe</th>
             <th colspan="2">Cuma</th>
         </tr>
+            </thead>
+        <tbody>
         <tr>
             <td>1. Ders</td>
             <td>08:40- <br>09:30</td>
@@ -89,6 +103,7 @@
             <td colspan="2"></td>
             <td colspan="2"></td>
         </tr>
+            </tbody>
     </table>
 </body>
 </html>
