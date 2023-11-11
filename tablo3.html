@@ -1,13 +1,32 @@
 
 <!DOCtype html>
 <html>
-<table width="25%" border ="1">
+  <head>
+    <title>Tablo 3</title>
+      <style>
+         table {
+            width: 50%; 
+            border-collapse: collapse;
+            border: 1px solid black; 
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            
+        }
+    </style>
+  </head>
+  <body>
+<table>
+  <thead>
 <tr>
 <td>Columu 1 </td>
 <td>Columu 2 </td>
 <td>Columu 3 </td>
 </tr>
-
+</thead>
+  <tbody>
 <tr>
 <td rowspan=2>Row 1 Cell 1</td>
 <td>Row 1 Cell 2</td>
@@ -21,6 +40,7 @@
 <tr>
 <td colspan=3>Row 3 Cell 1</td>
 </tr>
-
+</tbody>
 </table>
+  </body>
 </html>
