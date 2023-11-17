@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+    <style>
+        .flex-container { 
+            display: flex;
+            background-color: black;
+            flex-wrap: wrap;
+            justify-content: space-around;
+           
+  
+
+        }
+        
+        .flex-container > div {
+            color: white;
+            background-color: rgb(85, 79, 79);
+            height: 50px;
+            
+
+        }
+
+
+        @media screen and (max-width: 1200px) {
+        .flex-container
+        {
+        flex-direction: row;
+        }
+            }
+        @media screen and (max-width: 600px) {
+.flex-container
+{
+flex-direction:column;
+}
+            }   
+            #login{
+                background-color: greenyellow;
+
+            }
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div>Kapak</div>
+        <div>İçindekiler</div>
+        <div>Önsöz</div>
+        <div>Bölüm1</div>
+        <div>Bölüm2</div>
+        <div class="login" id="login">Login</div>
+
+    </div>
+    
+</body>
+</html>
