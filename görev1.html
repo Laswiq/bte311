@@ -53,12 +53,12 @@
 
 
         @keyframes kare3 {
-          0%   { opacity: 1;}
-          25%   { opacity: 0.5;}
+          0%   { opacity: 0;}
           
-          50%  { opacity: 0.25;}
+          50%  { opacity: 1;}
           
-          100% { opacity: 1;}
+          100% { opacity: 0;}
+          
         }
         .kare3 {
           width: 100px;
@@ -77,16 +77,16 @@
         .kare4 {
           width: 100px;
           height: 100px;
-          margin-top: 400px;
+          margin-top: 250px;
           background-color: black;
           position: relative;
           animation-name: kare4;
           animation-duration: 4s;
-          animation-duration: 5s;
+         
           animation-timing-function: linear;
           animation-delay: 2s;
           animation-iteration-count: infinite;
-          animation-direction: alternate;
+          animation-direction: normal;
         }
         
         @keyframes kare4 {
@@ -95,6 +95,31 @@
           
           100% { left:0px; top:0px;}
         }
+
+        .kare5
+        {
+          width: 100px;
+          height: 100px;
+          margin-top:-100px;
+          margin-left: 350px;
+          background-color: blueviolet;
+          animation-duration: 4s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          animation-direction: normal;
+          animation-name: kare5;
+
+        }
+
+        @keyframes kare5 
+        {
+          0% {transform: rotate(0deg);}
+        
+          100% {transform: rotate(360deg);}
+          
+
+        }
+
 
 
 
@@ -105,5 +130,6 @@
 <div class="kare2"></div>
 <div class="kare3"></div>
 <div class="kare4"></div>
+<div class="kare5"></div>
 
 </html>
