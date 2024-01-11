@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+    <p id="skor1"></p>
+<form>
+<label> 1. soru: Bir elementin yuvarlak köşelere sahip olmasını sağlamak için hangi özelliği kullanırsınız?</label><br>
+<input type="radio" name="s1" id="s1a" value="a"> a) border-radius <br>
+<input type="radio" name="s1" id="s1b"value="b"> b) corner-radius<br>
+<input type="radio" name="s1" id="s1c" value="c"> c) roundness<br>
+<input type="radio" name="s1" id="s1d" value="d"> d) edge-radius<br>
+
+<label> 2. soru: Bir elementin arka plan rengini belirlemek için hangi özelliği kullanırsınız?</label><br>
+<group id="s2">
+    <input type="radio" name="s2" value="a"> a) color<br>
+    <input type="radio" name="s2" value="b"> b) background-color<br>
+    <input type="radio" name="s2" value="c"> c) foreground-color<br>
+    <input type="radio" name="s2" value="d"> d) bg-color<br>
+</group>
+
+<label> 3. soru: CSS'de, bir sayfadaki tüm &lt;h1&gt; etiketleri asıl seçersiniz?</label><br>
+<group id="s3">
+    <input type="radio" name="s3" value="a"> a) #h1 { }<br>
+    <input type="radio" name="s3" value="b"> b) .h1 { }<br>
+    <input type="radio" name="s3" value="c"> c) &lt;h1&gt;<br>
+    <input type="radio" name="s3" value="d"> d) h1 { }<br>
+</group>
+
+<label> 4. soru: HTML içinde bir elementin stilini doğrudan belirtmek için hangi nitelik kullanılır?</label><br>
+<group id="s3">
+    <input type="radio" name="s4" value="a"> a) styles<br>
+    <input type="radio" name="s4" value="b"> b) id<br>
+    <input type="radio" name="s4" value="c"> c) style<br>
+    <input type="radio" name="s4" value="d"> d) font<br>
+</group>
+
+<label> 5. soru: Bir metnin altını çizmek için hangi CSS özelliği kullanılır?</label><br>
+<group id="s3">
+    <input type="radio" name="s5" value="a"> a) text-decoration<br>
+    <input type="radio" name="s5" value="b"> b) underline-style<br>
+    <input type="radio" name="s5" value="c"> c) underline<br>
+    <input type="radio" name="s5" value="d"> d) text-underline<br>
+</group>
+
+<label> 6. soru: HTML sayfasına JavaScript eklemek için  hangi etiket kullanılır.</label><br>
+<group id="s3">
+    <input type="radio" name="s6" value="a"> a) &lt;javascript&gt;<br>
+    <input type="radio" name="s6" value="b"> b) &lt;script&gt;<br>
+    <input type="radio" name="s6" value="c"> c) &lt;js&gt;<br>
+    <input type="radio" name="s6" value="d"> d) &lt;scriptjava&gt;<br>
+</group>
+
+<label> 7. soru: JavaScript'te sabit bir değişkeni tanımlamak için hangi anahtar kelime kullanılır?</label><br>
+<group id="s3">
+    <input type="radio" name="s7" value="a"> a) let<br>
+    <input type="radio" name="s7" value="b"> b) variable<br>
+    <input type="radio" name="s7" value="c"> c) const<br>
+    <input type="radio" name="s7" value="d"> d) var<br>
+</group>
+
+<label> 8. soru: Aşağıdaki değişken tanımlamalarından hangisi JavaScript yazım kurallarına uymaz?</label><br>
+<group id="s3">
+    <input type="radio" name="s8" value="a"> a) let hi = "Merhaba";<br>
+    <input type="radio" name="s8" value="b"> b) const 123gezegen = "Dünya";<br>
+    <input type="radio" name="s8" value="c"> c) var _degisken = "Günaydın";<br>
+    <input type="radio" name="s8" value="d"> d) let $abc = "Selam";<br>
+</group>
+
+<label> 9. soru:  Aşağıdakilerden hangisi JavaScript'te doğru dizi tanımlamasıdır?</label><br>
+<group id="s3">
+    <input type="radio" name="s9" value="a"> a) var liste = 1 = ("Ayşe"), 2 = ("Ali"), 3 = ("Ahmet")<br>
+    <input type="radio" name="s9" value="b"> b) var liste = ["Ayşe", "Ali", "Ahmet"]<br>
+    <input type="radio" name="s9" value="c"> c) var liste = (1:"Ayşe", 2:"Ali", 3:"Ahmet")<br>
+    <input type="radio" name="s9" value="d"> d) var liste = "Ayşe", "Ali", "Ahmet"<br>
+</group>
+
+<label> 10. soru: 1.41 sayısını en yakın tam sayıya nasıl yuvarlarsınız?</label><br>
+<group id="s3">
+    <input type="radio" name="s10" value="a"> a) rnd(1.41)<br>
+    <input type="radio" name="s10" value="b"> b) round(1.41)<br>
+    <input type="radio" name="s10" value="c"> c) rnd(1.41)<br>
+    <input type="radio" name="s10" value="d"> d) Math.round(1.41)<br>
+</group>
+
+<input type="button" value="Gönder" onclick="test()">
+
+</form>
+
+
+<script>
+    
+     function test(){
+        const radioButtons1 = document.querySelectorAll('input[name="s1"]');
+        
+        const radioButtons2 = document.querySelectorAll('input[name="s2"]');
+        const radioButtons3 = document.querySelectorAll('input[name="s3"]');
+        const radioButtons4 = document.querySelectorAll('input[name="s4"]');
+        const radioButtons5 = document.querySelectorAll('input[name="s5"]');
+        const radioButtons6 = document.querySelectorAll('input[name="s6"]');
+        const radioButtons7 = document.querySelectorAll('input[name="s7"]');
+        const radioButtons8 = document.querySelectorAll('input[name="s8"]');
+        const radioButtons9 = document.querySelectorAll('input[name="s9"]');
+        const radioButtons10 = document.querySelectorAll('input[name="s10"]');
+
+            for (const radioButton of radioButtons10) {
+                if (radioButton.checked) {
+                   var selectedSize = radioButton.value;
+                    break;
+                }
+            }
+
+    var skor=0;
+    if (radioButtons1[0].checked)
+    {
+        window.alert("1. soru doğru");
+    skor+=1;
+    }
+    if (radioButtons2[1].checked)
+    {
+        window.alert("2. soru doğru");
+    skor+=1;
+    }
+    if (radioButtons3[2].checked)
+    {
+        window.alert("3. soru doğru");
+    skor+=1;
+    }
+    if (radioButtons4[2].checked)
+    {
+        window.alert("4. soru doğru");
+    skor+=1;
+    }
+    if (radioButtons5[0].checked)
+    {
+        window.alert("5. soru doğru");
+    skor+=1;
+    }
+    if (radioButtons6[1].checked)
+    {
+        window.alert("6. soru doğru");
+    skor+=1;
+    }
+    if (radioButtons7[2].checked)
+    {
+        window.alert("7. soru doğru");
+    skor+=1;
+    }
+    if (radioButtons8[1].checked)
+    {
+        window.alert("8. soru doğru");
+    skor+=1;
+    }
+    if (radioButtons9[1].checked)
+    {
+        window.alert("9. soru doğru");
+    skor+=1;
+    }
+    if (radioButtons10[3].checked)
+    {
+        window.alert("10. soru doğru");
+    skor+=1;
+    }
+document.getElementById("skor1").innerHTML=skor;
+}
+            </script>
+
+
+</body>
+</html>
