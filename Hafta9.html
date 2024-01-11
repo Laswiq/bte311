@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastgele Resim</title>
+    
+</head>
+<body>
+
+<img id="randomImage" src="" alt="Random Image" width="125" height="125">
+
+<div>
+    <table>
+        <tr>
+            <th colspan="2"> <img src="img/image11.jpg" alt="resim1" width="125" id="img1"></th>
+            <th colspan="2"> <img src="img/image12.jpg" alt="resim1" width="125" id="img2"></th>
+            <th colspan="2"> <img src="img/image13.jpg" alt="resim1" width="125" id="img3"></th>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="toggleImage('img1')">Göster</button> 
+            </td>
+            <td> 
+                <button type="button" onclick="toggleImage('img1', true)">Gizle</button>
+            </td>
+            <td><button type="button" onclick="toggleImage('img2')">Göster</button> </td>
+            <td><button type="button" onclick="toggleImage('img2', true)">Gizle</button></td>
+            <td><button type="button" onclick="toggleImage('img3')">Göster</button></td>
+            <td><button type="button" onclick="toggleImage('img3', true)">Gizle</button></td>
+        </tr>
+    </table>
+<script>
+    const imagePath = "img/";
+    const imageNames = ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png", "image6.png", "image7.png", "image8.png", "image9.png", "image10.png"];
+
+    function showRandomImage() {
+        const randomIndex = Math.floor(Math.random() * imageNames.length);
+        const randomImageName = imageNames[randomIndex];
+        const randomImageElement = document.getElementById("randomImage");
+        randomImageElement.src = imagePath + randomImageName;
+
+   
+        const randomColor = getRandomColor();
+        document.body.style.backgroundColor = randomColor;
+    }
+
+    function getRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    function toggleImage(imageId, hide = false) {
+            var img = document.getElementById(imageId);
+            if (hide) {
+                img.style.opacity = '0';
+            } else {
+                img.style.opacity = '1';
+            }
+        }
+
+    window.onload = showRandomImage;
+    document.addEventListener("DOMContentLoaded", showRandomImage);
+   
+</script>
+
+</body>
+</html>
